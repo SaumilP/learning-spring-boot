@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.3.RELEASE</version>
+    </parent>
+
+    <groupId>org.saumilp.apps</groupId>
+    <artifactId>multi-moduled-boot-app-parent</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Multi-Module Boot Application</name>
+    <description>Spring Boot application with multi modules</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
+
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <start-class>org.sandcastle.apps.Application</start-class>
+        <spring.boot-starter-parent.version>1.5.3.RELEASE</spring.boot-starter-parent.version>
+    </properties>
+
+    <modules>
+        <module>api</module>
+        <module>core</module>
+        <module>web</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>bootstrap</artifactId>
+                <version>3.3.7</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jdt.core.compiler</groupId>
+                <artifactId>ecj</artifactId>
+                <version>4.6.1</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

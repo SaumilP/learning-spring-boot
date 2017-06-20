@@ -1,0 +1,12 @@
+prjoect:
+  name: Multi-Module Boot Application
+  version: 0.1-SNAPSHOT
+info:
+  build:
+    name: ${project.name}
+    version: ${project.version}
+
+# Logging configuration
+logging:
+  config: classpath:logback-spring.xml
+
