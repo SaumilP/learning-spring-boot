@@ -5,13 +5,40 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.saumilp.apps</groupId>
+        <groupId>org.sandcastle.apps</groupId>
         <artifactId>multi-moduled-boot-app-parent</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>multi-moduled-boot-app-api</artifactId>
+    <artifactId>moduled-app-api</artifactId>
     <name>Multi-Module Boot Application : Api</name>
     <description>Module contains apis</description>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
+    <properties>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
+
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.16</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>

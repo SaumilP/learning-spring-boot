@@ -4,18 +4,23 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.saumilp.apps</groupId>
+        <groupId>org.sandcastle.apps</groupId>
         <artifactId>multi-moduled-boot-app-parent</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>multi-moduled-boot-app-core</artifactId>
+    <artifactId>moduled-app-core</artifactId>
     <name>Multi-Module Boot Application : Core</name>
     <description>Module contains core domain logic</description>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <properties>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
+
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -42,6 +47,13 @@
             <artifactId>spring-core</artifactId>
         </dependency>
 
+        <!-- Module Dependencies -->
+        <dependency>
+            <groupId>org.sandcastle.apps</groupId>
+            <artifactId>moduled-app-api</artifactId>
+            <version>0.1-SNAPSHOT</version>
+        </dependency>
+
         <!-- Testing Dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -55,10 +67,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

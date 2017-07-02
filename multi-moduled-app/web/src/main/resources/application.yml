@@ -10,3 +10,6 @@ info:
 logging:
   config: classpath:logback-spring.xml
 
+spring:
+  main:
+    banner-mode: "off"

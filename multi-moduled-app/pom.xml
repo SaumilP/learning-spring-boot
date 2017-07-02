@@ -9,7 +9,7 @@
         <version>1.5.3.RELEASE</version>
     </parent>
 
-    <groupId>org.saumilp.apps</groupId>
+    <groupId>org.sandcastle.apps</groupId>
     <artifactId>multi-moduled-boot-app-parent</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
