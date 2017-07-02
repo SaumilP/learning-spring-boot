@@ -1,4 +1,4 @@
-package org.sandcastle.apps;
+package org.sandcastle.apps.service;
 
 public class UserServiceException extends Exception {
 

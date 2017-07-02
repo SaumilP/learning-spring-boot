@@ -1,4 +1,4 @@
-package org.sandcastle.apps;
+package org.sandcastle.apps.service;
 
 import org.sandcastle.apps.dto.User;
 

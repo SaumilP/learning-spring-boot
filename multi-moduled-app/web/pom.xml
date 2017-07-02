@@ -11,10 +11,13 @@
     </parent>
 
     <artifactId>moduled-boot-web</artifactId>
-    <packaging>war</packaging>
-
     <name>Multi-Module Boot Application : Web</name>
     <description>Web module used for exposing services to external parties</description>
+    <packaging>war</packaging>
+
+    <properties>
+        <start-class>org.sandcastle.apps.WebApp</start-class>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -81,18 +84,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <repositories>
-        <repository>
-            <id>spring-releases</id>
-            <url>https://repo.spring.io/libs-release</url>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>spring-releases</id>
-            <url>https://repo.spring.io/libs-release</url>
-        </pluginRepository>
-    </pluginRepositories>
 </project>
