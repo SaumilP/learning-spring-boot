@@ -1,0 +1,16 @@
+version: "3.6"
+services:
+  rabbitmq:
+    image: 'rabbitmq:3.11.7-management-alpine'
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+      - '5552:5552'
+    environment:
+      AMQP_URL: 'amqp://rabbitmq?connection_attempts=5&retry_delay=5'
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+      RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS: '-rabbitmq_stream advertised_host localhost'
+    volumes:
+      - "./enabled_plugins:/etc/rabbitmq/enabled_plugins"
+      #- ./rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
